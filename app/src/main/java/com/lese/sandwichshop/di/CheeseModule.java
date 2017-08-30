@@ -13,8 +13,6 @@ import dagger.Provides;
 @Module
 public class CheeseModule {
 
-    public CheeseModule(){}
-
     @Provides
     Cheese provideCheese() {
         return new Provolone();

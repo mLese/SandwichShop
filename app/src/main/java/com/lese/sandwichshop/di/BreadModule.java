@@ -13,8 +13,6 @@ import dagger.Provides;
 @Module
 public class BreadModule {
 
-    public BreadModule(){}
-
     @Provides
     Bread provideBread() {
         return new Sourdough();

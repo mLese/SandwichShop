@@ -13,8 +13,6 @@ import dagger.Provides;
 @Module
 public class MeatModule {
 
-    public MeatModule(){}
-
     @Provides
     Meat provideMeat() {
         return new Ham();
