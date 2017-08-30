@@ -6,6 +6,8 @@ import android.widget.TextView;
 
 import com.lese.sandwichshop.bread.Bread;
 import com.lese.sandwichshop.cheese.Cheese;
+import com.lese.sandwichshop.di.DaggerSandwichComponent;
+import com.lese.sandwichshop.di.SandwichComponent;
 import com.lese.sandwichshop.meat.Meat;
 
 import javax.inject.Inject;
@@ -33,8 +35,8 @@ public class MainActivity extends AppCompatActivity {
         cheeseView = (TextView) findViewById(R.id.cheese);
         meatView = (TextView) findViewById(R.id.meat);
 
-        //SandwichComponent component = DaggerSandwichComponent.builder().build();
-        //component.inject(this);
+        SandwichComponent component = DaggerSandwichComponent.builder().build();
+        component.inject(this);
 
         breadView.setText(bread.getBreadName());
         cheeseView.setText(cheese.getCheeseName());
